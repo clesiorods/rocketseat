@@ -44,3 +44,9 @@ div#dados {
     margin-top: 25px;
     padding: 20px;
 }
+
+ul#itens {
+    text-align: left;
+    list-style-type: square;
+    padding-left: 26px;
+}
