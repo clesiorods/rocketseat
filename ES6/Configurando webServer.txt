@@ -1,0 +1,12 @@
+// GERENCIANDO WEBPACK
+
+	*CRIAR UMA PASTA public E UMA PASTA src  NA RAÍZ DO PROJETO
+	*NO ARQUIVO webpack.config.js, ATUALIZAR OS NOVOS DIRETÓRIOS DOS ARQUIVOS
+	*NO TERMINAL RODAR yarn add webpack-dev-server -D
+	*NO ARQUIVO webpack.config.js, ADICIONAR O OBJETO devServer ANTES DO module
+		devServer: {
+        		contentBase: __dirname + '/public'
+    		},
+    	*NO ARQUIVO package.json, ALTERAR O "dev" para "webpack-dev-server --mode=development"
+    	*NO ARQUIVO package.json, DEPOIS DO "dev", ADICIONAR O "build"
+    		"build": "webpack --mode=production"
