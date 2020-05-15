@@ -1,0 +1,20 @@
+// CONFIGURAÇÃO DO AMBIETNTE DE DESENVOLVIMENTO WEB //
+
+ (INSTALAÇÃO DO YARN) => {
+ 	*SITE OFOCIAL DO DESENVOLVEDOR 
+ }
+ 
+ (CONFIGURAÇÃ0 DO BABEL) => {
+ 	*YARN INIT
+ 	*YARN ADD @BABEL/CLI
+ 	*YARN ADD @BABEL/CORE
+ 	*YARN ADD @BABEL/PRESET-ENV
+ 	*CRIASÇÃO DO .babelrc COM OS SEGUINTES PARÂMETROS:
+ 		{
+ 			"presets": ["@babel/preset-env"]
+ 		}
+ 	*ADIÇÃO DO ARQUIVO packege.json:
+ 		"scripts" {
+ 			"dev": "babel ./main.js -o ./bundle.js  -w"
+ 		}
+ 	*SE NECESSÁRIO, ADICIONAR OS ARQUIVOS NÃO SINCRONIZÁVEIS AO .gitignore	

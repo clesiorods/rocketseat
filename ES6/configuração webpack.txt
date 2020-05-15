@@ -1,0 +1,25 @@
+//CONFIGURADO WEBPACK
+
+    *NO ARQUIVO package.json, ALTERAR O TRECHO "dependecencies" { ... } PARA "devDependencies"
+    *NO TERMINAL: yarn add webpack webpack-cli -D
+    *NO TERMINAL: yarn add babel-loader -D
+    *CRIRAR O ARQUIO webpack.config.js
+        module.exports = {
+            entry: './main.js',
+            output: {
+                path: __dirname,
+                filename: 'bundle.js',
+            },
+            modules: {
+                rules: [
+                    {
+                        test: /\.js$/,
+                        exclude: /node_modules/,
+                        use: {
+                            loader: 'babel-loader',
+                        }
+                    }
+                ],
+            },
+        };
+    *NO ARQUIVO package.jason, ALTERAR O CONTEÚDO DE "dev" POR "webpack --mode=development -w"
