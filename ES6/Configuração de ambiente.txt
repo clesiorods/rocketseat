@@ -1,0 +1,72 @@
+// CONFIGURAÇÃO DO AMBIETNTE DE DESENVOLVIMENTO WEB //
+
+ (INSTALAÇÃO DO YARN) => {
+ 	*SITE OFOCIAL DO DESENVOLVEDOR 
+ }
+ 
+ (CONFIGURAÇÃ0 DO BABEL) => {
+ 	*YARN INIT
+ 	*YARN ADD @BABEL/CLI
+ 	*YARN ADD @BABEL/CORE
+ 	*YARN ADD @BABEL/PRESET-ENV
+ 	*CRIASÇÃO DO .babelrc COM OS SEGUINTES PARÂMETROS:
+ 		{
+ 			"presets": ["@babel/preset-env"]
+ 		}
+ 	*ADIÇÃO DO ARQUIVO packege.json:
+ 		"scripts" {
+ 			"dev": "babel ./main.js -o ./bundle.js  -w"
+ 		}
+ 	*SE NECESSÁRIO, ADICIONAR OS ARQUIVOS NÃO SINCRONIZÁVEIS AO .gitignore	
+ 	
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 	
+ 	
+ 	//CONFIGURADO WEBPACK
+
+    *NO ARQUIVO package.json, ALTERAR O TRECHO "dependecencies" { ... } PARA "devDependencies"
+    *NO TERMINAL: yarn add webpack webpack-cli -D
+    *NO TERMINAL: yarn add babel-loader -D
+    *CRIRAR O ARQUIO webpack.config.js
+        module.exports = {
+            entry: './main.js',
+            output: {
+                path: __dirname,
+                filename: 'bundle.js',
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.js$/,
+                        exclude: /node_modules/,
+                        use: {
+                            loader: 'babel-loader',
+                        }
+                    }
+                ],
+            },
+        };
+    *NO ARQUIVO package.jason, ALTERAR O CONTEÚDO DE "dev" POR "webpack --mode=development -w"
+    
+    
+    
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    
+    // GERENCIANDO WEBPACK
+
+	*CRIAR UMA PASTA public E UMA PASTA src  NA RAÍZ DO PROJETO
+	*NO ARQUIVO webpack.config.js, ATUALIZAR OS NOVOS DIRETÓRIOS DOS ARQUIVOS
+	*NO TERMINAL RODAR yarn add webpack-dev-server -D
+	*NO ARQUIVO webpack.config.js, ADICIONAR O OBJETO devServer ANTES DO module
+		devServer: {
+        		contentBase: __dirname + '/public'
+    		},
+    	*NO ARQUIVO package.json, ALTERAR O "dev" para "webpack-dev-server --mode=development"
+    	*NO ARQUIVO package.json, DEPOIS DO "dev", ADICIONAR O "build"
+    		"build": "webpack --mode=production"
+    		
+    		
+    		
+    		
+    		

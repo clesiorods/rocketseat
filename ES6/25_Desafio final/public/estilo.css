@@ -1,0 +1,25 @@
+
+img {
+    width: 80px;
+    float: left;
+    margin-right: 10px;
+}
+
+ul {
+    font-family: sans-serif;
+    list-style: none;
+    font-size: 20px;
+}
+
+li {
+    height: 80px;
+}
+
+strong {
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 5px;
+    margin-left: 0px;
+}
