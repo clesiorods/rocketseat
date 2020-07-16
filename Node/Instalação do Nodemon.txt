@@ -1,0 +1,5 @@
+// INSTALAÇÃO NODEMON
+
+	npm install nodemon -D
+	NO ARQUIVO package.json, ADICIONAR O SCRIPT "dev": "nodemon server.js"
+	RODAR COMO npm run dev
